@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main CSS -->
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <!-- Google Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>PassG|Random Password Generator</title>
+  </head>
+  <body class="flex justify-center font-inter">
+    <main class="bg-[#13131a] w-96 p-7">
+      <!-- Header -->
+      <header class="flex justify-between items-center mb-6">
+        <!-- Logo -->
+        <div class="flex justify-start items-center">
+          <svg
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32px"
+            height="32px"
+            viewBox="0 0 512 512"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <g fill="#2563eb">
+              <path
+                d="M87.3 495 c-29.4 -3.2 -55.6 -23.3 -65.9 -50.6 -5.6 -14.9 -5.4 -7.7 -5.4 -188.4 0 -139.4 0.2 -168 1.4 -174.2 5.9 -30.9 27.7 -54.1 59.1 -63 l8 -2.3 171 0 171 0 8 2.2 c4.4 1.3 12.3 4.4 17.5 7 7.9 3.9 11.1 6.3 18.6 13.8 10.5 10.4 15.8 18.8 20.6 32.5 l3.3 9.5 0.3 169.5 c0.2 125.4 0 171.4 -0.8 177 -4.9 31.5 -27.5 56.2 -59.5 65.2 l-8 2.3 -166 0.1 c-91.3 0.1 -169.3 -0.2 -173.2 -0.6z m81.2 -179.5 c3.9 -0.8 10.8 -3.4 15.5 -5.7 14.1 -7.1 26.5 -21.3 31.6 -36.2 l1.6 -4.6 43.9 0 43.9 0 0 11.5 c0 12.8 1 16.6 5.6 20.9 4.2 3.9 8.6 4.4 12.9 1.5 5.9 -4 7.5 -8.7 7.5 -22.2 l0 -11.7 15 0 15 0 0 11.5 c0 12.8 1 16.6 5.6 20.9 4.2 3.9 8.6 4.4 12.9 1.5 5.9 -4 7.5 -8.7 7.5 -22.1 l0 -11.6 8.4 -0.3 c6.6 -0.3 9.1 -0.9 11.2 -2.5 7.2 -5.3 8.5 -11 3.9 -16.9 -5.1 -6.8 0.2 -6.5 -101.4 -6.5 l-91.9 0 -1.6 -4.6 c-5.1 -15.1 -17.4 -29.1 -31.7 -36.2 -11.8 -5.9 -21.9 -7.9 -32 -6.4 -26.4 3.8 -48.3 24.5 -53.6 50.7 -2 9.9 -0.8 20 3.6 30.5 6.1 14.7 16.6 26 30.6 33 12.9 6.5 23.4 8.1 36 5.5z"
+              />
+              <path
+                d="M146 289.7 c-9 -2.6 -17.2 -10.2 -21.1 -19.7 -0.9 -2.3 -1.4 -7.3 -1.4 -14.5 0 -9.7 0.3 -11.6 2.4 -15.7 3.8 -7.3 7.4 -11.1 14.3 -14.9 6.1 -3.3 6.6 -3.4 17.8 -3.4 11.3 0 11.6 0.1 18 3.6 12.4 6.8 17.5 17 16.8 33.3 -0.4 10.7 -2.9 16.7 -9.2 23.1 -6.5 6.4 -12.4 8.7 -23.6 9.1 -5.8 0.3 -11.3 -0.1 -14 -0.9z"
+              />
+            </g>
+            <g fill="#ffffff">
+              <path
+                d="M144 318.5 c-10.6 -2.3 -22.4 -8.9 -30.5 -17 -12.1 -12.2 -18.3 -25.6 -19.2 -41.9 -2 -35.2 24.9 -65.3 60.1 -67.3 11.8 -0.7 21.3 1.4 32.5 6.9 14.3 7.1 26.6 21.1 31.7 36.2 l1.6 4.6 91.9 0 c101.7 0 96.2 -0.4 101.5 6.6 2.4 3.1 2.9 4.7 2.9 9.5 0 6.2 -1.7 9.4 -6.9 13.3 -2.1 1.6 -4.6 2.2 -11.2 2.5 l-8.4 0.3 0 11.6 c0 13.4 -1.6 18.1 -7.5 22.1 -2.9 2 -4.4 2.3 -9.3 1.9 -6.9 -0.5 -10.4 -2.7 -13.2 -8.4 -1.7 -3.3 -2 -6 -2 -15.7 l0 -11.7 -12 0 -12 0 0 11.7 c0 13.5 -1.6 18.2 -7.5 22.2 -2.9 2 -4.4 2.3 -9.3 1.9 -6.9 -0.5 -10.4 -2.7 -13.2 -8.4 -1.7 -3.3 -2 -6 -2 -15.7 l0 -11.7 -40.9 0 -40.9 0 -1.6 4.6 c-2.9 8.4 -8.9 17.8 -16 24.9 -15.3 15.2 -37.2 21.5 -58.6 17z m27.6 -33.7 c23.7 -11.1 24.5 -44 1.4 -56.7 -6 -3.3 -7.1 -3.6 -15 -3.6 -7.7 0.1 -9.1 0.4 -14.8 3.5 -6.9 3.7 -10.6 7.5 -14.3 14.8 -1.9 3.8 -2.3 6.3 -2.4 12.7 0 4.7 0.6 9.4 1.4 11.5 3.9 9.5 12.1 17.1 21.1 19.7 6.3 1.8 16.6 0.9 22.6 -1.9z"
+              />
+            </g>
+          </svg>
+
+          <h1
+            class="text-center text-white font-bold text-2xl select-none ml-2"
+          >
+            Pass<span class="text-primary">G</span>
+          </h1>
+        </div>
+
+        <a href="https://github.com/AnasAlgunaid" target="_blank">
+          <span
+            class="material-symbols-outlined hover:text-primary duration-300 cursor-pointer active:opacity-70 select-none"
+          >
+            info
+          </span>
+        </a>
+      </header>
+
+      <!-- Password Area -->
+      <div
+        id="passwordArea"
+        class="bg-[#1c1c24] w-full h-12 p-3 text-white text-center text-base rounded-xl mt-4 flex cursor-pointer duration-500"
+      >
+        <!-- Generated Password -->
+        <h1
+          class="flex-1 overflow-ellipsis overflow-hidden"
+          id="generatedPassword"
+        ></h1>
+        <!-- Refresh button -->
+        <span
+          id="refreshButton"
+          class="material-symbols-outlined flex-none hover:rotate-[360deg] active:scale-75 active:opacity-80 duration-500 select-none"
+        >
+          replay
+        </span>
+      </div>
+
+      <!-- Password Strength -->
+      <progress
+        id="passwordStrength"
+        class="progress w-full h-1.5"
+        value="0"
+        max="8"
+      ></progress>
+
+      <!-- Divider -->
+      <div class="divider mt-4">Password Length</div>
+
+      <!-- Password length -->
+      <div class="my-2">
+        <p
+          class="mb-1 text-center text-white font-bold text-3xl"
+          id="lengthValue"
+        >
+          16
+        </p>
+        <!-- Slider -->
+        <div class="flex items-center">
+          <button
+            id="decreaseButton"
+            class="text-lg btn border-1 border-primary w-9 btn-sm hover:bg-primary"
+          >
+            -
+          </button>
+          <input
+            type="range"
+            min="1"
+            max="50"
+            value="16"
+            steps="1"
+            class="range range-primary mx-3"
+            id="lengthSlider"
+          />
+          <button
+            id="increaseButton"
+            class="text-lg btn btn-primary btn-sm w-9"
+          >
+            +
+          </button>
+        </div>
+      </div>
+
+      <!-- Password Options -->
+      <div class="my-5">
+        <!-- Lowercase -->
+        <div>
+          <label class="label cursor-pointer hover:text-white duration-300">
+            <span class="text-base">Lowercase</span>
+            <input
+              id="lowercaseCheckbox"
+              type="checkbox"
+              checked="checked"
+              class="checkbox checkbox-primary checkbox-md password-option"
+            />
+          </label>
+        </div>
+
+        <!-- Uppercase -->
+        <div>
+          <label class="label cursor-pointer hover:text-white duration-300">
+            <span class="text-base">Uppercase</span>
+            <input
+              id="uppercaseCheckbox"
+              type="checkbox"
+              checked="checked"
+              class="checkbox checkbox-primary checkbox-md password-option"
+            />
+          </label>
+        </div>
+
+        <!-- Numbers -->
+        <div>
+          <label class="label cursor-pointer hover:text-white duration-300">
+            <span class="text-base">Numbers</span>
+            <input
+              id="numbersCheckbox"
+              type="checkbox"
+              checked="checked"
+              class="checkbox checkbox-primary checkbox-md password-option"
+            />
+          </label>
+        </div>
+
+        <!-- Symbols -->
+        <div>
+          <label class="label cursor-pointer hover:text-white duration-300">
+            <span class="text-base">Symbols</span>
+            <input
+              id="symbolsCheckbox"
+              type="checkbox"
+              checked="checked"
+              class="checkbox checkbox-primary checkbox-md password-option"
+            />
+          </label>
+        </div>
+
+        <!-- Custom Symbols -->
+        <div
+          class="mt-2 flex gap-2 duration-200 transition-all tooltip tooltip-primary w-full"
+          id="customSymbolsDiv"
+          data-tip="Enter the allowed symbols"
+        >
+          <input
+            id="customSymbolsField"
+            type="text"
+            value="!@#$%^&*()_-+=<>?/[]{},.:;"
+            class="input input-bordered w-full input-sm"
+            maxlength="40"
+          />
+          <button
+            id="resetSymbolsButton"
+            class="btn btn-outline btn-primary btn-sm"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Generate Button -->
+      <button
+        id="generateButton"
+        class="btn btn-primary w-full text-lg text-white"
+      >
+        Generate
+      </button>
+
+      <!-- Copyright -->
+      <!-- <footer>
+        <a
+          href="https://github.com/AnasAlgunaid"
+          class="flex justify-center items-center text-xs mt-3 cursor-pointer opacity-70 hover:opacity-100 hover:text-primary"
+          target="_blank"
+        >
+          &#169; Made By Anas Algunaid
+        </a>
+      </footer> -->
+    </main>
+
+    <script type="text/javascript" src="zxcvbn.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
